@@ -640,7 +640,7 @@ footer{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: rgba(255, 255, 255, 0.7);
+        background: rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(20px);
         width: 100%;
         min-height: 450px;
@@ -651,6 +651,7 @@ footer{
         flex-direction: column;
     }
     .nav-menu-btn{
+        color: white;
         display: flex;
         align-items: center;
         justify-content: center;

@@ -1,13 +1,22 @@
 /* ----- NAVIGATION BAR FUNCTION ----- */
-function myMenuFunction(){
-    var menuBtn = document.getElementById("myNavMenu");
+function myMenuFunction() {
+  var menuBtn = document.getElementById("myNavMenu");
 
-    if(menuBtn.className === "nav-menu"){
-      menuBtn.className += " responsive";
-    } else {
+  if (menuBtn.className === "nav-menu") {
+    menuBtn.className += " responsive";
+  } else {
+    menuBtn.className = "nav-menu";
+  }
+}
+
+document.querySelectorAll('.nav-menu a').forEach(item => {
+  item.addEventListener('click', () => {
+    var menuBtn = document.getElementById("myNavMenu");
+    if (menuBtn.className.includes("responsive")) {
       menuBtn.className = "nav-menu";
     }
-  }
+  });
+});
 
 /* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
   window.onscroll = function() {headerShadow()};
