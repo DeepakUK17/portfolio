@@ -457,20 +457,62 @@ nav{
     align-items: center;
     flex-direction: column;
     width: 30%;
-    height: 250px;
     background: var(--color-white);
     border-radius: 20px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     overflow: hidden;
 }
-.project-box>i{
-    font-size: 50px;
-    color: #00B5E7;
-    margin-bottom: 25px;
+
+.project-box-info {
+    gap: 20px;
+    padding: 10px;
+    z-index: 2;
+
 }
-.project-box label{
-    font-size: 15px;
-    color: #777;
+.project-box img{
+    z-index: 2;
+    border-radius: 5px;
+    width: 80%;
+    margin-top: 5px;
+    border: solid;
+    
+}
+
+.project-box-skills span{
+    z-index: 2;
+    font-size: 8px;
+    font-weight: 600;
+    background-color: #00B5E7;
+    border-radius: 25px;
+    padding: 1px 4px;
+    margin: 1px;
+    z-index: 2;
+}
+
+.project-box-year  {
+    font-size: 12px}
+
+.project-box-btn {
+    margin-top: 10px;
+    display: inline-flex;
+    width: 160px; 
+}
+
+.project-box-btn:hover .btn {
+    background-color: var(--second-color);
+    color: var(--color-white);
+
+}
+.btn {
+    background-color: rgb(0, 201, 255);
+}
+
+.project-box:hover .btn {
+    background-color:white;
+    color: black;
+}
+.project-box:hover.project-box img{
+    transform: scale(1.05);
 }
 .project-box::after, .contact-info::after{
     content: "";
