@@ -535,6 +535,70 @@ nav{
     z-index: 2;
 }
 
+/* ----- EDUCATION BOX ----- */
+.education-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.education-box-info {
+    overflow: hidden;
+    z-index: 2;
+}
+
+.education-box {
+    width: 80%;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.education-box-year {
+    font-size: 15px;
+    color: #434242;
+}
+
+.education-box-discription {
+    margin-top: 15px;
+}
+
+.education-box-grade {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.education-box + .education-box {
+    border-top: 2px solid #ddd;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.education-box::after{
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    margin-top: 0%;
+    background: var(--second-color);
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+    z-index: -1;
+}
+
+.education-box:hover::after {
+    bottom: 0;
+}
+
 /* ----- CONTACT BOX ----- */
 .contact-info{
     position: relative;
