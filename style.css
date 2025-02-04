@@ -640,6 +640,10 @@ nav{
 }
 
 /* ----- CONTACT FORM ----- */
+#contactForm{
+    display: block;
+}
+
 .contact-info a{
     color: inherit;
     text-decoration: none;
@@ -693,6 +697,21 @@ textarea{
     rotate: -45deg;
 }
 
+.success-message {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    width: 100%;
+    height: 315px;
+    background: var(--second-color);
+    border-radius: 10px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    overflow: hidden;
+
+}
 /* ----- FOOTER BOX ----- */
 footer{
     display: flex;

@@ -125,3 +125,26 @@ function scrollActive() {
 }
 
 window.addEventListener('scroll', scrollActive)
+
+/* ----- FORM AUTO MAIL SENT ----- */
+
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Stop redirection
+
+  let form = event.target;
+  let formData = new FormData(form);
+
+  fetch(form.action, {
+      method: "POST",
+      body: formData
+  }).then(response => {
+      if (response.ok) {
+          document.querySelector(".success-message").style.display = "flex"; // Show success message
+          document.getElementById("contactForm").style.display = "none"; // Hide form
+          form.reset(); // Clear form fields
+      } else {
+          alert("❌ Something went wrong. Please try again.");
+      }
+  }).catch(error => console.error("Error:", error));
+});
