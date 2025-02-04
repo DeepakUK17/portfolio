@@ -130,21 +130,31 @@ window.addEventListener('scroll', scrollActive)
 
 
 document.getElementById("contactForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // Stop redirection
+  event.preventDefault(); // Prevent default form submission
 
   let form = event.target;
   let formData = new FormData(form);
 
+  // Convert formData to JSON
+  let jsonData = {};
+  formData.forEach((value, key) => {
+      jsonData[key] = value;
+  });
+
   fetch(form.action, {
       method: "POST",
-      body: formData
-  }).then(response => {
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(jsonData) // Convert data to JSON format
+  })
+  .then(response => {
       if (response.ok) {
+          // Show success message after successful submission
           document.querySelector(".success-message").style.display = "flex"; // Show success message
-          document.getElementById("contactForm").style.display = "none"; // Hide form
+          document.getElementById("contactForm").style.display = "none"; // Hide the form
           form.reset(); // Clear form fields
       } else {
           alert("❌ Something went wrong. Please try again.");
       }
-  }).catch(error => console.error("Error:", error));
+  })
+  .catch(error => console.error("Error:", error));
 });
