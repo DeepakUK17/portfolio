@@ -158,3 +158,15 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   })
   .catch(error => console.error("Error:", error));
 });
+
+function showCertificate(imagePath) {
+   const modal = document.getElementById("certificateModal");
+   const modalImg = document.getElementById("certificateImage");
+   modal.style.display = "block";
+   modalImg.src = imagePath;
+}
+
+function closeModal() {
+   const modal = document.getElementById("certificateModal");
+   modal.style.display = "none";
+}
