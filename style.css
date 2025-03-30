@@ -121,8 +121,8 @@ nav{
     text-decoration: none;
     color: var(--text-color-second);
     font-weight: 500;
-    padding-inline: 10px;
-    margin-inline: 20px;
+    padding-inline: 5px;
+    margin-inline: 10px;
 }
 .nav-menu-btn{
     display: none;
@@ -839,35 +839,7 @@ footer{
 
 /* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
 @media only screen and (max-width: 900px) {
-    .nav-button{
-        display: none;
-    }
-    .nav-menu.responsive{
-        left: 0;
-    }
-    .nav-menu{
-        position: fixed;
-        top: 80px;
-        left: -100%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: rgba(0, 0, 0, 0.7);
-        backdrop-filter: blur(20px);
-        width: 100%;
-        min-height: 450px;
-        height: 90vh;
-        transition: .3s;
-    }
-    .nav_menu_list{
-        flex-direction: column;
-    }
-    .nav-menu-btn{
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+   
     .featured-box{
         flex-direction: column;
         justify-content: center;
@@ -931,6 +903,56 @@ footer{
     }
     .input-field{
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1185px) {
+    .nav-button{
+        display: none;
+    }
+    .nav-menu.responsive{
+        left: 0;
+    }
+    .nav-menu{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(20px);
+        width: 100%;
+        min-height: 450px;
+        height: 90vh;
+        transition: .3s;
+    }
+    .nav_menu_list{
+        flex-direction: column;
+    }
+    .nav-menu-btn{
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .certificate-container {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .certificate-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .certificate-container {
+        grid-template-columns: 1fr; 
     }
 }
 
