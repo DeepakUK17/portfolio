@@ -121,7 +121,7 @@ nav{
     text-decoration: none;
     color: var(--text-color-second);
     font-weight: 500;
-    padding-inline: 15px;
+    padding-inline: 10px;
     margin-inline: 20px;
 }
 .nav-menu-btn{
