@@ -906,7 +906,7 @@ footer{
     }
 }
 
-@media only screen and (max-width: 1185px) {
+@media only screen and (max-width: 1200px) {
     .nav-button{
         display: none;
     }
