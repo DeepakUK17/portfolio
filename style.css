@@ -537,13 +537,13 @@ nav{
 
 /* Certificates Section */
 #certificates {
-    padding: 50px 20px;
+    padding: 50px 0px;
     background-color: transparent; /* Remove background */
 }
 
 .certificate-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-columns: repeat(5, 1fr); /* 4 columns */
     gap: 20px;
 }
 
@@ -551,7 +551,7 @@ nav{
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 10px 3px ;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     
